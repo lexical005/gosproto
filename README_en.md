@@ -37,16 +37,16 @@ object           | \struct
 
 # Schema parser and meta info
 
-https://github.com/davyxu/gosproto/tree/master/meta
+https://github.com/lexical005/sproto/tree/master/meta
 
 # Code generator
 
-https://github.com/davyxu/gosproto/tree/master/sprotogen
+https://github.com/lexical005/sproto/tree/master/sprotogen
 
 ## Install
 
 ```
-	go get -u -v github.com/davyxu/gosproto/sprotogen
+	go get -u -v github.com/lexical005/sproto/sprotogen
 ```
 
 ## Usage
@@ -65,7 +65,7 @@ https://github.com/davyxu/gosproto/tree/master/sprotogen
 
 # Protobuf Schema --> sproto Schema convertor
 
-https://github.com/davyxu/gosproto/tree/master/pb2sproto
+https://github.com/lexical005/sproto/tree/master/pb2sproto
 
 ## Features
 Keep all message leading comments and field trailing comments
@@ -73,7 +73,7 @@ Keep all message leading comments and field trailing comments
 ## Install
 
 ```
-	go get -u -v github.com/davyxu/gosproto/pb2sproto
+	go get -u -v github.com/lexical005/sproto/pb2sproto
 ```
 Requires: github.com/davyxu/pbmeta
 
@@ -81,7 +81,7 @@ Requires: github.com/davyxu/pbmeta
 
 ```
 	# Use protoc and github.com/davyxu/pbmeta/protoc-gen-meta to generate protobuf meta info file(contains comments)
-	# see github.com/davyxu/gosproto/pb2sproto/Make.bat
+	# see github.com/lexical005/sproto/pb2sproto/Make.bat
 	
 	# Use meta info to generate sproto file
 	pb2sproto --pbmeta=meta.pb --outdir=.	
@@ -93,7 +93,7 @@ Due to sproto not support float field type, all float double format will convert
 
 # Example
 
-https://github.com/davyxu/gosproto/tree/master/example
+https://github.com/lexical005/sproto/tree/master/example
 
 ```golang
 	input := &AddressBook{
@@ -144,7 +144,7 @@ https://github.com/davyxu/gosproto/tree/master/example
 # Test
 
 ```golang
-go test github.com/davyxu/gosproto
+go test github.com/lexical005/sproto
 ```
 
 
@@ -152,13 +152,13 @@ go test github.com/davyxu/gosproto
 
 
 ```
-$ go test -bench . github.com/davyxu/gosproto
+$ go test -bench . github.com/lexical005/sproto
 BenchmarkEncode-8         	  500000	      2498 ns/op
 BenchmarkDecode-8         	  500000	      3134 ns/op
 BenchmarkEncodePacked-8   	  500000	      2894 ns/op
 BenchmarkDecodePacked-8   	  500000	      3480 ns/op
 PASS
-ok  	github.com/davyxu/gosproto	6.162s
+ok  	github.com/lexical005/sproto	6.162s
 ```
 
 * xjdrew/gosproto Version

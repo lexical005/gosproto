@@ -3,7 +3,7 @@ package main
 import (
 	"strings"
 
-	"github.com/davyxu/gosproto/meta"
+	"github.com/lexical005/sproto/meta"
 )
 
 type fieldModel struct {
@@ -24,7 +24,6 @@ type structModel struct {
 
 	f *fileModel
 }
-
 
 func (self *structModel) IsResultEnum() bool {
 	return self.IsEnum() && strings.HasSuffix(self.Name, "Result")

@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/davyxu/gosproto"
+	"github.com/lexical005/sproto"
 )
 
 var abData []byte = []byte{

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/davyxu/gosproto"
+	"github.com/lexical005/sproto"
 )
 
 type PackTestCase struct {

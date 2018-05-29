@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/davyxu/gosproto/meta"
+	"github.com/lexical005/sproto/meta"
 	"os"
 	"strconv"
 	"strings"

@@ -4,7 +4,7 @@
 
 
 English Doc see below:
-https://github.com/davyxu/gosproto/blob/master/README_en.md
+https://github.com/lexical005/sproto/blob/master/README_en.md
 
 # 代码基于
 
@@ -176,12 +176,12 @@ message AddressBook {
 # 编译
 
 ```
-	go get -u -v github.com/davyxu/gosproto/sprotogen
+	go get -u -v github.com/lexical005/sproto/sprotogen
 ```
 
 # 下载
 
-https://github.com/davyxu/gosproto/releases
+https://github.com/lexical005/sproto/releases
 
 # sprotogen命令行参数
 
@@ -216,13 +216,13 @@ https://github.com/davyxu/gosproto/releases
 
 # 例子
 
-https://github.com/davyxu/gosproto/tree/master/example
+https://github.com/lexical005/sproto/tree/master/example
 
 
 
 # 可选工具:Protobuf描述格式转sproto描述格式
 
-https://github.com/davyxu/gosproto/tree/master/pb2sproto
+https://github.com/lexical005/sproto/tree/master/pb2sproto
 
 ## 特性
 保留所有protobuf的注释
@@ -230,7 +230,7 @@ https://github.com/davyxu/gosproto/tree/master/pb2sproto
 ## 安装方法
 
 ```
-	go get -u -v github.com/davyxu/gosproto/pb2sproto
+	go get -u -v github.com/lexical005/sproto/pb2sproto
 ```
 第三方库依赖: github.com/davyxu/pbmeta
 
@@ -238,7 +238,7 @@ https://github.com/davyxu/gosproto/tree/master/pb2sproto
 
 ```
 	# 使用Protobuf编译器:protoc配合插件github.com/davyxu/pbmeta/protoc-gen-meta 生成pb的上下文信息
-	# 参见: github.com/davyxu/gosproto/pb2sproto/Make.bat
+	# 参见: github.com/lexical005/sproto/pb2sproto/Make.bat
 	
 	# 根据上下文信息导出sproto
 	pb2sproto --pbmeta=meta.pb --outdir=.	
@@ -253,4 +253,4 @@ https://github.com/davyxu/gosproto/tree/master/pb2sproto
 
 知乎: [http://www.zhihu.com/people/sunicdavy](http://www.zhihu.com/people/sunicdavy)
 
-提交bug及特性: https://github.com/davyxu/gosproto/issues
+提交bug及特性: https://github.com/lexical005/sproto/issues
