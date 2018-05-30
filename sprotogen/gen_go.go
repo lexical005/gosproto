@@ -27,8 +27,8 @@ var (
 	{{$enumobj.Name}}{{.Name}}: "{{.Name}}" ,{{end}}
 	}
 
-	_{{$enumobj.Name}}MapperObject = map[int]func() interface{}{ {{range .StFields}}
-	{{$enumobj.Name}}{{.Name}}: func() interface{} { return &{{.Name}}{} },{{end}}
+	_{{$enumobj.Name}}MapperObject = map[int]func() (interface{}, string){ {{range .StFields}}
+	{{$enumobj.Name}}{{.Name}}: func() (interface{}, string) { return &{{.Name}}{}, "{{.Name}}" },{{end}}
 	}
 )
 
@@ -37,12 +37,13 @@ func {{$enumobj.Name}}MapName({{$enumobj.Name}} int) (string, bool) {
 	return v, ok
 }
 
-func {{$enumobj.Name}}MapObject({{$enumobj.Name}} int) (interface{}, bool) {
+func {{$enumobj.Name}}MapObject({{$enumobj.Name}} int) (interface{}, string, bool) {
 	f, ok := _{{$enumobj.Name}}MapperObject[{{$enumobj.Name}}]
 	if ok {
-		return f(), ok
+		obj, name := f()
+		return obj, name, ok
 	}
-	return nil, ok
+	return nil, "", ok
 }
 
 {{end}}
